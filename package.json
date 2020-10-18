@@ -1,0 +1,32 @@
+{
+  "name": "cra-template-xstate",
+  "version": "0.0.0",
+  "scripts": {
+    "prettify": "prettier --write './template/src/**/*.js'",
+    "lint": "eslint './template/src/**/*.js'",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "xstate"
+  ],
+  "description": "The xstate template for Create React App.",
+  "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kwdowik/cra-template-xstate.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "bugs": {
+    "url": "https://github.com/kwdowik/cra-template-xstate/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}

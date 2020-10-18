@@ -1,0 +1,11 @@
+{
+  "package": {
+    "dependencies": {
+      "@xstate/react": "^1.0.1",
+      "xstate": "^4.13.0"
+    },
+    "eslintConfig": {
+      "extends": ["react-app", "react-app/jest"]
+    }
+  }
+}
