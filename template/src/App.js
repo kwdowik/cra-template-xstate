@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Menu } from './features/menu/Menu'
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Menu } from "./features/menu/Menu";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img className="App-logo" src={logo} alt="XState" width="100"/>
+        <img className="App-logo" src={logo} alt="XState" width="100" />
         <Menu />
         <p>
           Edit <code>src/App.js</code> and save to reload.
