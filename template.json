@@ -2,10 +2,9 @@
   "package": {
     "dependencies": {
       "@xstate/react": "^1.0.1",
-      "xstate": "^4.13.0"
-    },
-    "eslintConfig": {
-      "extends": ["react-app", "react-app/jest"]
+      "xstate": "^4.13.0",
+      "@testing-library/jest-dom": "^5.11.4",
+      "@testing-library/react": "^11.1.0"
     }
   }
 }
