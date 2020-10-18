@@ -2,7 +2,6 @@
   "name": "cra-template-xstate",
   "version": "0.0.0",
   "scripts": {
-    "prettify": "prettier --write './template/src/**/*.js'",
     "lint": "eslint './template/src/**/*.js'",
     "test": "jest"
   },
@@ -30,13 +29,14 @@
     "template.json"
   ],
   "devDependencies": {
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
+    "@xstate/react": "^1.0.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-config-react-app": "^5.1.0",
     "eslint-plugin-flowtype": "^4.5.2",
     "eslint-plugin-import": "^2.18.2",
@@ -48,6 +48,10 @@
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-test-renderer": "^16.12.0"
+    "react-test-renderer": "^16.12.0",
+    "xstate": "^4.13.0"
+  },
+  "dependencies": {
+    "regenerator-runtime": "^0.13.7"
   }
 }
