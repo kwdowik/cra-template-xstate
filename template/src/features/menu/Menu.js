@@ -1,16 +1,16 @@
-import React from "react";
-import { useMachine } from "@xstate/react";
-import { fetchMachine } from "./fetchMachine";
-import styles from "./Menu.module.css";
+import React from 'react';
+import { useMachine } from '@xstate/react';
+import { fetchMachine } from './fetchMachine';
+import styles from './Menu.module.css';
 
 export function Menu() {
   const [state, send] = useMachine(fetchMachine);
 
-  const isLoading = state.value === "loading";
-  const isError = state.value === "failure";
+  const isLoading = state.value === 'loading';
+  const isError = state.value === 'failure';
 
-  const fetchData = failure => send("FETCH", { failure });
-  const retryFetchData = () => send("RETRY");
+  const fetchData = failure => send('FETCH', { failure });
+  const retryFetchData = () => send('RETRY');
 
   return (
     <div>

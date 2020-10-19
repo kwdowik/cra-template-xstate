@@ -1,57 +1,57 @@
-import { Machine, assign } from "xstate";
+import { Machine, assign } from 'xstate';
 
 const fetchMachine = Machine(
   {
-    id: "fetch",
-    initial: "idle",
+    id: 'fetch',
+    initial: 'idle',
     context: {
       results: [],
-      message: ""
+      message: '',
     },
     states: {
       idle: {
         on: {
-          FETCH: "loading"
-        }
+          FETCH: 'loading',
+        },
       },
       loading: {
         invoke: {
-          src: "fetchData",
-          onDone: { target: "success" },
-          onError: { target: "failure" }
-        }
+          src: 'fetchData',
+          onDone: { target: 'success' },
+          onError: { target: 'failure' },
+        },
       },
       success: {
-        entry: ["setResults"],
+        entry: ['setResults'],
         on: {
-          FETCH: "loading"
-        }
+          FETCH: 'loading',
+        },
       },
       failure: {
-        entry: ["setMessage"],
+        entry: ['setMessage'],
         on: {
-          RETRY: "loading"
-        }
-      }
-    }
+          RETRY: 'loading',
+        },
+      },
+    },
   },
   {
     services: {
       fetchData: async (ctx, event) => {
         const resp = await request(response, event.failure);
         return resp.data;
-      }
+      },
     },
     actions: {
       setResults: assign((ctx, event) => ({
-        message: "",
-        results: event.data
+        message: '',
+        results: event.data,
       })),
       setMessage: assign((ctx, event) => ({
         message: event.data,
-        results: []
-      }))
-    }
+        results: [],
+      })),
+    },
   }
 );
 
@@ -59,24 +59,24 @@ const response = {
   data: [
     {
       id: 1,
-      text: "Chocolate 🍫"
+      text: 'Chocolate 🍫',
     },
     {
       id: 2,
-      text: "Cookie 🍪"
+      text: 'Cookie 🍪',
     },
     {
       id: 3,
-      text: "Doughnut 🍩"
-    }
-  ]
+      text: 'Doughnut 🍩',
+    },
+  ],
 };
 
 const request = (response, failure) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (failure) {
-        reject("Cannot load menu, please retry.");
+        reject('Cannot load menu, please retry.');
       }
       resolve(response);
     }, 2000);
