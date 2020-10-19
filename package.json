@@ -1,6 +1,6 @@
 {
   "name": "cra-template-xstate",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "prettify": "prettier --write './template/src/**/*.js'",
     "lint": "eslint './template/src/**/*.js'",
