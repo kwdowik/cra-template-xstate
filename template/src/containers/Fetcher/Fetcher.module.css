@@ -1,0 +1,30 @@
+.button {
+  padding: 6px 12px;
+  margin: 10px;
+  outline: none;
+  border: 1px solid transparent;
+  color: #232435;
+  border: 1px solid #3a3c5a;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.error {
+  font-weight: 500;
+  color: red;
+}
+
+.success {
+  font-weight: 500;
+  color: green;
+}
+
+.button:hover, .button:focus {
+  border: 1px solid #3a3c5a;
+}
+
+.button:active {
+  background-color: #cecece;
+}
