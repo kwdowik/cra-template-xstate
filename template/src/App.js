@@ -1,14 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Menu } from './features/menu/Menu';
+import { Users } from './containers';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img className="App-logo" src={logo} alt="XState" width="100" />
-        <Menu />
+        <img className="App-logo" src={logo} alt="XState" width="200" />
+        <Users />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>

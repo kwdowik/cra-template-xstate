@@ -1,0 +1,21 @@
+.heading {
+  font-weight: bold;
+}
+
+.wrapper {
+  min-width: 400px;
+}
+
+.input {
+  padding: 6px 8px;
+  width: 60%;
+  outline: none;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid #ececee;
+  color: #232435;
+}
+
+.checkbox {
+  cursor: pointer;
+}
